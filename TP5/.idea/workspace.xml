@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5a8476fe-d2c6-4f51-98fd-1a24d0749b5a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="ProjectId" id="1YhWXOyI4R83BaCVboGPJlBXIOe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a8476fe-d2c6-4f51-98fd-1a24d0749b5a" name="Default Changelist" comment="" />
+      <created>1583395344161</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583395344161</updated>
+      <workItem from="1583395345409" duration="7388000" />
+      <workItem from="1583497964085" duration="6581000" />
+      <workItem from="1583665483898" duration="10995000" />
+      <workItem from="1583841023494" duration="662000" />
+      <workItem from="1583851260938" duration="6138000" />
+      <workItem from="1583961246913" duration="75000" />
+      <workItem from="1584459512530" duration="50000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="667" y="131" key="#PHP" timestamp="1583396860213">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="667" y="131" key="#PHP/0.0.1920.1080@0.0.1920.1080" timestamp="1583396860213" />
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1584459560131">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1584459560131" />
+    <state x="795" y="464" key="NewPhpFileDialog" timestamp="1583745753229">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="795" y="464" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1583745753229" />
+    <state x="461" y="183" key="SettingsEditor" timestamp="1583854739304">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="183" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1583854739304" />
+    <state x="92" y="92" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583854860834">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="92" y="92" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1583854860834" />
+    <state x="655" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1584459528872">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="655" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584459528872" />
+    <state x="616" y="250" key="run.anything.popup" timestamp="1583744596453">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1583744596453" />
+    <state x="623" y="235" key="search.everywhere.popup" timestamp="1583745249840">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1583745249840" />
+  </component>
+</project>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1184d326-a711-4d92-a0e8-d2215a1f3033" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectId" id="1YcfSEPJx31VfLUsMwpODaXju99" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1184d326-a711-4d92-a0e8-d2215a1f3033" name="Default Changelist" comment="" />
+      <created>1583246800442</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583246800442</updated>
+      <workItem from="1583246802025" duration="5738000" />
+      <workItem from="1583326780059" duration="3501000" />
+      <workItem from="1583391958356" duration="837000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="187" y="134" key="#PHP" timestamp="1583247360967">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="187" y="134" key="#PHP/0.0.1920.1080@0.0.1920.1080" timestamp="1583247360967" />
+    <state x="795" y="464" key="NewPhpFileDialog" timestamp="1583246829386">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="795" y="464" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1583246829386" />
+    <state x="50" y="172" width="998" height="708" key="SettingsEditor" timestamp="1583247315705">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="50" y="172" width="998" height="708" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1583247315705" />
+    <state x="655" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1583391983753">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="655" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1583391983753" />
+    <state x="601" y="265" width="700" height="530" key="recent.locations.popup" timestamp="1583327567744">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="601" y="265" width="700" height="530" key="recent.locations.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1583327567744" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/main.php</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
