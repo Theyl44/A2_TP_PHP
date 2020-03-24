@@ -30,7 +30,7 @@ class equipe{
     }
 
 }
-$p1 = new equipe("RajaCasabianca", 0);
+$p1 = new equipe("RajaCasablanca", 0);
 $p1->display();
 $p1::getNbTeam();
 ?>
