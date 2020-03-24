@@ -1,18 +1,17 @@
 <?php
-class Formulaire{
+    class formulaire{
 
-    public function __construct($nom_fichier, $methode ){
-        echo"<form action=$nom_fichier method= $methode >\n";
+        function __construct($nomFichier, $methode) {
+            echo "<form method=$nomFichier action=$methode>";
+        }
+        function ajouterZoneText($text, $name){
+            echo $text."<input type= 'text' name=$name />";
+        }
+        function ajouterBouton(){
+            echo "<input type = 'submit' value='Envoyer'/>";
+        }
+        function getForm(){
+            echo "</form>";
+        }
     }
-    public function ajouterzonetexte($text, $name){
-        echo"$text : <input type='text' name = $name/>\n";
-    }
-    public function ajouterbouton(){
-        echo"<input type='submit' value='send' />\n";
-    }
-    public function getform(){
-        echo"</form>\n";
-    }
-}
-
 ?>
