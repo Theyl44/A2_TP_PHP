@@ -1,6 +1,6 @@
 <?php
     include 'formulaire.php';
-    echo"<h1>test</h1>";
+
     $form = new formulaire("testformulaire.php","post");
     $form->ajouterzonetexte("Votre nom","nom");
     echo "<br>";
