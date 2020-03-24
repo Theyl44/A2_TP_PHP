@@ -7,8 +7,8 @@ class Formulaire{
     public function ajouterzonetexte($text, $name){
         echo"$text : <input type='text' name = $name/>\n";
     }
-    public function ajouterbouton($name){
-        echo"<input type='submit' value=$name/>\n";
+    public function ajouterbouton(){
+        echo"<input type='submit' value='send' />\n";
     }
     public function getform(){
         echo"</form>\n";
