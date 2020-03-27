@@ -7,6 +7,9 @@ class formulaire{
     function ajouterzonetexte($text,$name){
         echo $text."<input type='text' name=$name />";
     }
+    function ajouterLabel($test){
+        echo"<br>$test<br>";
+    }
     function ajouterbouton(){
         echo "<input type='submit' value='Envoyer'/>";
     }
@@ -30,13 +33,14 @@ $form->ajouterzonetexte("Votre nom","nom");
 echo "<br>";
 $form->ajouterzonetexte("Votre code","code");
 echo "<br>";
+$form->ajouterLabel("Quelles est votre sexe ? ");
 $form->ajouterButtonRation("Homme");
 echo "<br>";
 $form->ajouterButtonRation("Femme");
 echo "<br>";
 $form->ajouterButtonRation("non genré");
 echo "<br>";
-
+$form->ajouterLabel("Quelle sportpartiquer vous ?");
 $listSport = array("Tennis", "Golf", "Foot", "Volley");
 foreach($listSport as $sport){
     $form->ajouterCasesACocher("$sport");
