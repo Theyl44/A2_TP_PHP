@@ -17,10 +17,10 @@ class formulaire{
 
 class form2 extends formulaire {
     function ajouterButtonRation($text){
-        echo"<input type='radio' value='$text' name='buttonRation'/>";
+        echo "$text".'<input type="radio" name="buttonRation" value='.$text.'>';
     }
     function ajouterCasesACocher($text){
-        echo"<input type='checkbox' value ='$text' name='casesACocher'/>";
+        echo"$text".'<input type="checkbox" name='.$text.'>';
 
     }
 }
@@ -30,14 +30,30 @@ $form->ajouterzonetexte("Votre nom","nom");
 echo "<br>";
 $form->ajouterzonetexte("Votre code","code");
 echo "<br>";
+$form->ajouterButtonRation("Homme");
+echo "<br>";
+$form->ajouterButtonRation("Femme");
+echo "<br>";
+$form->ajouterButtonRation("non genré");
+echo "<br>";
+
+$listSport = array("Tennis", "Golf", "Foot", "Volley");
+foreach($listSport as $sport){
+    $form->ajouterCasesACocher("$sport");
+    echo "<br>";
+}
 $form->ajouterbouton();
-echo "<br>";
-$form->ajouterButtonRation("Homme");
-echo "<br>";
-$form->ajouterButtonRation("Homme");
-echo "<br>";
-$form->ajouterCasesACocher("Tennis");
-echo "<br>";
-$form->ajouterCasesACocher("Equitation");
-echo "<br>";
 $form->getform();
+echo"<hr>";
+if(isset($_POST['nom']) && isset($_POST['code']) && isset($_POST['buttonRation'])) {
+    echo "Votre nom : " . $_POST['nom'] . "<br>";
+    echo "Votre code : " . $_POST['code'] . "<br>";
+    echo "Votes sexe est : " . $_POST['buttonRation'] . "<br>";
+    echo"Vos sports sont : <br>";
+    foreach($listSport as $sport){
+        if(isset($_POST["$sport"])) {
+            echo"$sport<br>";
+        }
+    }
+
+}
