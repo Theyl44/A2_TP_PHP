@@ -61,3 +61,4 @@ if(isset($_POST['nom']) && isset($_POST['code']) && isset($_POST['buttonRation']
     }
 
 }
+?>
