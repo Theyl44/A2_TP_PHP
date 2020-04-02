@@ -1,10 +1,10 @@
 <?php
 
-    abstract interface Shape{
-        function getArea();
+    abstract class Shape{
+        abstract function getArea();
     }
 
-    class Square implements Shape{
+    class Square extends Shape{
         private $width;
         private $height;
         function __construct($w, $h){
@@ -15,7 +15,7 @@
             return $this->width * $this->height;
         }
     }
-    class Circle implements Shape{
+    class Circle extends Shape{
         private $radius;
         function getArea(){
             return $this->radius * $this->radius * 3.14;
@@ -33,6 +33,4 @@
         echo get_class($value)." Area :".$value->getArea();
         echo"<br>";
     }
-
-
 ?>
