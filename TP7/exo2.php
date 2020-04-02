@@ -1,6 +1,6 @@
 <?php
 
-    interface Shape{
+    abstract interface Shape{
         function getArea();
     }
 
@@ -27,9 +27,12 @@
     $test1 = new Square(5, 5);
     $test2 = new Circle(3);
 
-    echo"pour le carré l'aire est de : ".$test1->getArea();
-    echo"<br>";
-    echo"pour le cercle l'aire est de : ".$test2->getArea();
-    echo"<br>";
+    $tab = array($test1, $test2);
+
+    foreach ($tab as $value){
+        echo get_class($value)." Area :".$value->getArea();
+        echo"<br>";
+    }
+
 
 ?>
