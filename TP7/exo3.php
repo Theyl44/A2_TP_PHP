@@ -19,7 +19,7 @@ trait Deux{
     }
 }
 
-class Text {
+class Texte {
     use Un,Deux {
         Un::big insteadof Deux;
         Deux::small insteadof Un;
@@ -27,5 +27,9 @@ class Text {
         Deux::small as petit;
     }
 }
-
+$texte = new Texte();
+$texte->small("manuel");
+$texte->big("php");
+$texte->gros("Enface");
+$texte->petit("txt");
 ?>

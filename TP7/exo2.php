@@ -26,11 +26,10 @@
     }
     $test1 = new Square(5, 5);
     $test2 = new Circle(3);
-
+    
     $tab = array($test1, $test2);
 
     foreach ($tab as $value){
         echo get_class($value)." Area :".$value->getArea();
-        echo"<br>";
     }
 ?>
