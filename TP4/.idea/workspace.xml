@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1184d326-a711-4d92-a0e8-d2215a1f3033" name="Default Changelist" comment="" />
+    <list default="true" id="1184d326-a711-4d92-a0e8-d2215a1f3033" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../TP5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/.idea/TP8.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/citation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/citations.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/connexpdo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/main.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/modification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP8/recherche.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TP5/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,7 +31,11 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1YcfSEPJx31VfLUsMwpODaXju99" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -21,6 +44,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TP5" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="SvnConfiguration">
@@ -36,6 +60,7 @@
       <workItem from="1583246802025" duration="5738000" />
       <workItem from="1583326780059" duration="3501000" />
       <workItem from="1583391958356" duration="837000" />
+      <workItem from="1588585635032" duration="18000" />
     </task>
     <servers />
   </component>
@@ -47,6 +72,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="187" y="134" key="#PHP/0.0.1920.1080@0.0.1920.1080" timestamp="1583247360967" />
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1588585650743">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1588585650743" />
     <state x="795" y="464" key="NewPhpFileDialog" timestamp="1583246829386">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
