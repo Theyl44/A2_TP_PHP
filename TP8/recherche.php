@@ -86,14 +86,13 @@
 //            print_r($reponse2->fetch());
 
             $reponse1 = $reponse1->fetch();
-            echo$reponse1['id']."".$reponse1['nom'];
+//            echo$reponse1['id']."".$reponse1['nom'];
 
             $reponse2 = $reponse2->fetch();
-            echo$reponse2['id']." ".$reponse2['numero'];
+//            echo$reponse2['id']." ".$reponse2['numero'];
 
-            $query = 'SELECT * FROM citation WHERE auteurid ='.$reponse1['id'].' and siecleid ='.$reponse2['id'];
-            $reponse3 = $dbh->prepare($query);
-            $reponse3->execute();
+            $reponse3 = $dbh->prepare('SELECT * FROM citation WHERE auteurid = ? and siecleid =? ');
+            $reponse3->execute(array($reponse1['id'],$reponse2['id']));
             print_r($reponse3->fetch());
         }
 

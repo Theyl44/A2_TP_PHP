@@ -22,7 +22,6 @@
     </div>
 </nav>
 <h1 class="display" >Citation du jour</h1>
-<hr>
 <?php
     $dsn = 'pgsql:dbname=citations;host=127.0.0.1;port=5432';
     $user = 'postgres';
