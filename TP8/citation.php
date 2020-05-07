@@ -54,10 +54,10 @@
     $reponse3 = $reponse3->fetch();
     echo"<p>".$reponse3['prenom']." ".$reponse3['nom']."</p>";
 
-    $reponse4 = $dbh->prepare('SELECT * FROM siecle WHERE id = ? ');
-    $reponse4->execute(array($reponse2['siecleid']));
-    $reponse4 = $reponse4->fetch();
-    echo"<p>(".$reponse4['numero']." siecle )</p>";
+        $reponse4 = $dbh->prepare('SELECT * FROM siecle WHERE id = ? ');
+        $reponse4->execute(array($reponse2['siecleid']));
+        $reponse4 = $reponse4->fetch();
+        echo"<p>(".$reponse4['numero']." siecle )</p>";
 
 
 ?>

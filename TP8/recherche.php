@@ -26,7 +26,7 @@
 <form method="post">
     <div class="form-group col-md-4">
         <label for="inputState">Autheur</label>
-        <select id="auteur" class="form-control" value="Choose">
+        <select id="auteur" class="form-control" name="auteur">
             <?php
             $dsn = 'pgsql:dbname=citations;host=127.0.0.1;port=5432';
             $user = 'postgres';
@@ -49,7 +49,7 @@
 
     <div class="form-group col-md-4">
         <label for="inputState">Siècle</label>
-        <select id="siecle" class="form-control" value="Choose">
+        <select id="siecle" class="form-control" value="Choose" name="siecle">
             <?php
             $dsn = 'pgsql:dbname=citations;host=127.0.0.1;port=5432';
             $user = 'postgres';
@@ -72,6 +72,30 @@
     <button type="submit" class="btn btn-primary">Rechercher</button>
 </form>
     <?php
+        if(isset($_POST['auteur']) && isset($_POST['siecle'])) {
+            $nameAuteur = array($_POST['auteur']);
+            $nameSiecle = array($_POST['siecle']);
+
+
+            $reponse1 = $dbh->prepare('SELECT * FROM auteur WHERE nom = ?');
+            $reponse1->execute($nameAuteur);
+//            print_r($reponse1->fetch());
+
+            $reponse2 = $dbh->prepare('SELECT * FROM siecle WHERE numero = ?');
+            $reponse2->execute($nameSiecle);
+//            print_r($reponse2->fetch());
+
+            $reponse1 = $reponse1->fetch();
+            echo$reponse1['id']."".$reponse1['nom'];
+
+            $reponse2 = $reponse2->fetch();
+            echo$reponse2['id']." ".$reponse2['numero'];
+
+            $query = 'SELECT * FROM citation WHERE auteurid ='.$reponse1['id'].' and siecleid ='.$reponse2['id'];
+            $reponse3 = $dbh->prepare($query);
+            $reponse3->execute();
+            print_r($reponse3->fetch());
+        }
 
     ?>
 </body>
