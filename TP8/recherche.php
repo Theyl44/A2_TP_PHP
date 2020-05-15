@@ -86,7 +86,7 @@
 //            print_r($reponse2->fetch());
 
             $reponse1 = $reponse1->fetch();
-//            echo$reponse1['id']."".$reponse1['nom'];
+//            echo$reponse1['id']."".$reponse1['nom'];²
 
             $reponse2 = $reponse2->fetch();
 //            echo$reponse2['id']." ".$reponse2['numero'];

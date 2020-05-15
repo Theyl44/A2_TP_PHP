@@ -84,7 +84,7 @@
             ?>
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Supprimer</button>
+    <button type="submit" class="btn btn-primary">Supprimer</   button>
 </form>
 
 <?php
