@@ -1,32 +1,37 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <title>Site</title>
-</head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="index.php">Accueil</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="viewnewuser.php">Inscription</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="viewlogin.php">Connexion</a>
-        </li>
-    </ul>
-</nav>
-
 <?php
-if($_GET['func'] == 'update') {
-    update();
+switch ($_GET['func']){
+    case 'update' :
+        update();
+        break;
+    case 'connect':
+        connect();
+        break;
+    case 'ajout_etudiant':
+        ajout_etudiant();
+        break;
 }
-if($_GET['func'] == 'connect'){
-    connect();
+function ajout_etudiant(){
+    if(isset($_GET['name']) && isset($_POST['id_etudiant']) && isset($_POST['nom_etudiant']) && isset($_POST['prenom_etudiant']) && isset($_POST['note_etudiant'])){
+        $dsn = 'pgsql:dbname=modele_vue_controleur;host=127.0.0.1;port=5432';
+        $user = 'postgres';
+        $password = 'theo0811';
+        try {
+            $dbh = new PDO($dsn, $user, $password);
+        } catch (PDOException $e) {
+            echo 'Connexion échouée : ' . $e->getMessage();
+        }
+        $ques = $dbh->prepare('INSERT INTO etudiant(id, user_id, nom , prenom, note) VALUES(:id, :user_id, :nom, :prenom, :note)');
+        $ques->execute(array(
+            'id'=>$_POST['id_etudiant'],
+            'user_id'=>$_GET['name'],
+            'nom'=>$_POST['nom_etudiant'],
+            'prenom'=>$_POST['prenom_etudiant'],
+            'note'=>$_POST['note_etudiant']));
+
+        $message='Votre Etudiant a bien été ajouter';
+        echo '<script type="text/javascript">window.alert("'.$message.'");</script>';
+        header('Location: viewadmin.php?name='.$_GET['name']);
+    }
 }
 function connect(){
     if(isset($_POST['login2']) && isset($_POST['pwd2'])){
@@ -45,7 +50,7 @@ function connect(){
         if($verif){//bon mdp
             header("Location: viewadmin.php?name=".$_POST['login2']);
         }else{//mauvais mdp
-            echo"<h1 style=\"text-align: center;\"><span class=\"material-icons\">highlight_off</span>MAUVAIS MDP</h1>";
+            echo"<h1 style=\"text-align: center;\">ERREUR DE LOGIN OU DE MDP</h1>";
         }
 
     }
