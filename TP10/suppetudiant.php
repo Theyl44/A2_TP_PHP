@@ -29,30 +29,29 @@
         </li>
     </ul>
 </nav>
-
 <body>
-    <h1 class="h1" style="text-align: center;">AJOUT D'ETUDIANTS</h1>
-    <form action="controleur.php?func=ajout_etudiant&name=<?php echo $_GET['name']?>" method="post">
+    <h1 class="h1" style="text-align: center;">SUPPRESSION D'UN ETUDIANT</h1>
+    <form action="controleur.php?func=supprimeretudiant&name=<?php echo $_GET['name']?>" method="post">
         <div class="form-group col-md-4">
-            <label for="id_etudiant">ID de l'étudiant</label>
-            <input type="text" class="form-control" id="id_etudiant" name="id_etudiant">
+            <label for="id_etudiant_supp">ID de l'étudiant</label>
+            <select id="id_etudiant_supp" class="form-control" value="Choose" name="id_etudiant_supp">
+                <?php
+                $dsn = 'pgsql:dbname=modele_vue_controleur;host=127.0.0.1;port=5432';
+                $user = 'postgres';
+                $password = 'theo0811';
+                try {
+                    $dbh = new PDO($dsn, $user, $password);
+                } catch (PDOException $e) {
+                    echo 'Connexion échouée : ' . $e->getMessage();
+                }
+                $reponse1 = $dbh->query('SELECT * FROM etudiant order by id');
+                while ($data = $reponse1->fetch()) {
+                    echo "<option>".$data['id']."</option>";
+                }
+                ?>
+            </select>
         </div>
-
-        <div class="form-group col-md-4">
-            <label for="nom_etudiant">Nom étudiant</label>
-            <input type="text" class="form-control" id="nom_etudiant" name="nom_etudiant">
-        </div>
-
-        <div class="form-group col-md-4">
-            <label for="prenom_etudiant">Prénom étudiant</label>
-            <input type="text" class="form-control" id="prenom_etudiant" name="prenom_etudiant">
-        </div>
-
-        <div class="form-group col-md-4">
-            <label for="note_etudiant">Note</label>
-            <input type="text" class="form-control" id="note_etudiant" name="note_etudiant">
-        </div>
-        <button type="submit" class="btn btn-primary">Ajouter</button>
+        <button type="submit" class="btn btn-primary">Supprimer</button>
     </form>
 </body>
 </html>
