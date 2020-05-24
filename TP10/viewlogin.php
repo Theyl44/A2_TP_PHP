@@ -1,39 +1,24 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <title>Site</title>
+    <title> Login </title>
+    <meta charset='UTF-8'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="index.php">Accueil</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="viewnewuser.php">Inscription</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="viewlogin.php">Connexion</a>
-        </li>
-    </ul>
-</nav>
-
 <body>
-    <h1 class="h1" style="text-align: center;">CONNEXION</h1>
-    <form action="controleur.php?func=connect" method="post">
-        <div class="form-group col-md-4">
-            <label for="login2">Login</label>
-            <input type="text" class="form-control" id="login2" name="login2">
-        </div>
-
-        <div class="form-group col-md-4">
-            <label for="pwd2">Password</label>
-            <input type="text" class="form-control" id="pwd2" name="pwd2">
-        </div>
-        <button type="submit" class="btn btn-primary">Ajouter</button>
-    </form>
+<div class="container" style="margin-top: 50px;">
+<h2> Se connecter </h2> <hr> <br>
+<form method='POST' action='controller.php?func=auth'>
+    <div class='form-group'>
+         <label for='username'> Nom de l'utilisateur </label>
+         <input type='text' class='form-control' id='username' name='username' required>
+    </div>
+    <div class='form-group'>
+          <label for='password'> Mot de passe </label>
+          <input type='password' class='form-control' id='password' name='password' required>
+    </div>
+    <button type='submit' class='btn btn-dark'> Se connecter </button>
+</form>
+</div>
 </body>
 </html>

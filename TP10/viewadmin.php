@@ -1,71 +1,43 @@
-<!DOCTYPE html>
+<?php session_start();
+    if (isset($_SESSION['id']) == false) {
+        header('Location: ./viewlogin.php');
+    }
+?>
+
+<!DOCTYPE HTML>
 <html>
-
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <title>Site</title>
+    <title> Admin </title>
+    <meta charset='UTF-8'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href='viewadmin.php?name=<?php echo $_GET['name']?>'>Accueil</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="viewnewuser.php">Inscription</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="view-editetudiant.php?name=<?php echo $_GET['name']?>">Ajout d'un étudiant</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="suppetudiant.php?name=<?php echo $_GET['name']?>">Suppression d'un étudiant</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="modif.php?name=<?php echo $_GET['name']?>">Modification d'une note</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="index.php">Déconnexion</a>
-        </li>
-    </ul>
-</nav>
-
 <body>
-
-    <h1 class="h1" style="text-align: center;">Bienvenue M ou Mme :  <?php echo $_GET['name']?></h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <table class=" table table-dark">
-        <thead>
-        <tr>
-            <th scope="col">id</th>
-            <th scope="col">Nom</th>
-            <th scope="col">Prenom</th>
-            <th scope="col">Note</th>
-        </tr>
-        </thead>
-        <tbody>
-    <?php
-        $dsn = 'pgsql:dbname=modele_vue_controleur;host=127.0.0.1;port=5432';
-        $user = 'postgres';
-        $password = 'theo0811';
-        try {
-            $dbh = new PDO($dsn, $user, $password);
-        } catch (PDOException $e) {
-            echo 'Connexion échouée : ' . $e->getMessage();
-        }
-
-        $ques = $dbh->query('SELECT * FROM etudiant order by id');
-        while ($data = $ques->fetch()) {
-            echo" <tr>";
-            echo "<td>".$data['id']."</td><td> ".$data['nom']." </td><td>".$data['prenom']."</td><td> ".$data['note']."</td>";
-            echo" </tr>";
-        }
-
-    ?>
-        </tbody>
-    </table>
+<div class="container" style="margin-top: 50px;">
+    <h2> Page administrateur - <?php echo $_SESSION['prenom']." ".$_SESSION['nom'] ?> </h2> <hr> <br>
+        <?php
+            $bdd = new PDO('pgsql:host=localhost;port=5432;dbname=etudiants;', 'postgres', 'Isen2019');
+            $request = $bdd->prepare('SELECT * FROM etudiant WHERE user_id=?');
+            $request->execute(array($_SESSION['id']));
+            echo "<table class='table'> <thead> <td> <b> Nom </b> </td> <td> <b> Prénom </b> </td> <td> <b> Note </b> </td> <td> <b> Supprimer </b></td></thead>";
+            while ($data = $request->fetch()) {
+                echo "<tr> <td>".$data['nom']."</td> <td>".$data['prenom']."</td> <td>".$data['note']." </td> <td> <a href='controller.php?func=destroy&id=".$data['id']."'> <button class=\"btn btn-dark\"> Supprimer </button> </a></td></tr>";
+            }
+            echo "</table> <br>";
+        ?>
+    <a href='view-newetudiant.php'> <button class="btn btn-dark"> Ajouter un étudiant </button> </a>
+    <a href='view-editetudiant.php'> <button class="btn btn-dark"> Modifier un étudiant </button> </a> <br> <br>
+    <h5> <b> Note moyenne :
+        <?php
+            $bdd = new PDO('pgsql:host=localhost;port=5432;dbname=etudiants;', 'postgres', 'Isen2019');
+            $request = $bdd->prepare('SELECT AVG(note) FROM etudiant WHERE user_id=?');
+            $request->execute(array($_SESSION['id']));
+            echo $request->fetch()['avg'];
+        ?>
+    </b> </h5> <br>
+    <a href='controller.php?func=close'> <button class="btn btn-dark"> Se déconnecter </button> </a>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>

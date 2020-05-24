@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5363bd4-3d6b-42ad-8fd9-90059943c90e" name="Default Changelist" comment="" />
+    <list default="true" id="a5363bd4-3d6b-42ad-8fd9-90059943c90e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,7 +14,11 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1XbrzyO33fzne5JkWCfxRPZtJnD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -21,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TP4" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="SvnConfiguration">
@@ -35,6 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581325901886</updated>
       <workItem from="1581325903265" duration="558000" />
+      <workItem from="1590237818503" duration="153000" />
     </task>
     <servers />
   </component>
@@ -42,17 +49,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="260" y="299" key="FileChooserDialogImpl" timestamp="1581326460884">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1590237970732">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="260" y="299" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1581326460884" />
-    <state x="315" y="467" key="NewPhpFileDialog" timestamp="1581325928133">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="315" y="467" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1581325928133" />
-    <state x="0" y="186" key="SettingsEditor" timestamp="1581326095835">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="0" y="186" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1581326095835" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-258.-1600.1200.1560@0.0.1920.1040" timestamp="1590237970732" />
   </component>
 </project>
