@@ -10,7 +10,7 @@
 <div class="container" style="margin-top: 50px;">
     <h2> Modifier un étudiant </h2> <hr> <br>
     <?php
-        $bdd = new PDO('pgsql:host=localhost;port=5432;dbname=etudiants;', 'postgres', 'Isen2019');
+        $bdd = new PDO('pgsql:host=localhost;port=5432;dbname=modele_vue_controleur;', 'postgres', 'theo0811');
         echo "<form method='POST' action='controller.php?func=modify'>
                   <div class='form-group'>
                     <label for='identity'> Etudiant </label>

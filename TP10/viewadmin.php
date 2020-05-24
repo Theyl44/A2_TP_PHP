@@ -15,7 +15,7 @@
 <div class="container" style="margin-top: 50px;">
     <h2> Page administrateur - <?php echo $_SESSION['prenom']." ".$_SESSION['nom'] ?> </h2> <hr> <br>
         <?php
-            $bdd = new PDO('pgsql:host=localhost;port=5432;dbname=etudiants;', 'postgres', 'Isen2019');
+            $bdd = new PDO('pgsql:host=localhost;port=5432;dbname=modele_vue_controleur;', 'postgres', 'theo0811');
             $request = $bdd->prepare('SELECT * FROM etudiant WHERE user_id=?');
             $request->execute(array($_SESSION['id']));
             echo "<table class='table'> <thead> <td> <b> Nom </b> </td> <td> <b> Prénom </b> </td> <td> <b> Note </b> </td> <td> <b> Supprimer </b></td></thead>";
